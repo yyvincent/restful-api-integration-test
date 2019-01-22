@@ -1,7 +1,7 @@
 		Zendesk ticket support rest api automation
 This framework is used to test the Zendesk RestFul API integration with their support ticket system. It uses Apache HTTP client to build a custome generic restful client with api token authentication.  The custom rest client is In the main directory. This client contains methods to do post, get, delete requests. The http response json content is mapped to Java POJO class with Jackson Object Mapper. Those POJO classes will be utilitized in the tests.
 
-\t\tA. Classes and description:
+A. Classes and description:
 
 class(package)
 
