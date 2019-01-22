@@ -3,8 +3,10 @@ This framework is used to test the Zendesk RestFul API integration with their su
 
 Classes and description:
 
-class(package)		
-AllTickets(main)	
+class(package)
+
+AllTickets(main)
+
 This class maps to the http response content of the list request. It stores all the ticket information in a list
 
 Ticket(main)		
