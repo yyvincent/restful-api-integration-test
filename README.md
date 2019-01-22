@@ -65,7 +65,9 @@ On your Java IDE, in the test package run the tests in TicketTest.java as Junit 
 
 
 C. Test cases documentation: All tests are in the TicketTest.java class in test package.
+
 tests and description
+
 testCreateATicket()	
 1. Verify the http response code equals to 201	
 2. Verify I can create a ticket
