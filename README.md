@@ -55,12 +55,14 @@ This class contains all the junit tests.
 
 B. Requirement to build and run the tests:
 
+
 Install maven 3.5.4
 Install Java 1.8
 Clone and Download the repository.
 
 Do a maven clean install
 On your Java IDE, in the test package run the tests in TicketTest.java as Junit tests. 
+
 
 C. Test cases documentation: All tests are in the TicketTest.java class in test package.
 tests and description
