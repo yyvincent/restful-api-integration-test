@@ -9,38 +9,48 @@ AllTickets(main)
 
 This class maps to the http response content of the list request. It stores all the ticket information in a list
 
-Ticket(main)		
+Ticket(main)
+
 This class contains the information for a ticket in the AllTickets class.
 
-TicketUtilities(main)	
+TicketUtilities(main)
+
 This static class contains methods that can return statistics of the system, for example the total number of tickets, 
 all the ticket ID, create a new ticket object.
 
-NewTicket(main)		
+NewTicket(main)	
+
 This class maps to the http response content of the create request. It has the information of the new ticket in the system. 
 
 RestClient(main)
+
 This is a generic rest client based on Apache http client. It has methods to do post, get, delete. It uses api token to do basic authorization in the header as following:
 
 	String encodedtoken = Base64.getEncoder().encodeToString(this.token.getBytes());
 	Header authorizationHeader = new BasicHeader("Authorization", "Basic " + encodedtoken);
 
-From(main)		
+From(main)
+
 element of the Ticket class.
 
-Source(main)		
+Source(main)
+
 element of the Ticket class. 
 
-To(main)		
+To(main)
+
 element of the Ticket class.
 
-Via(main)		
+Via(main)
+
 element of the Ticket class.
 
-Request(main)		
+Request(main)
+
 element of the NewTicket class.
 
-TicketTest(test)	
+TicketTest(test)
+
 This class contains all the junit tests.
 
 Requirement to build and run the tests:
