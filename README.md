@@ -1,7 +1,7 @@
 		Zendesk ticket support rest api automation
 This framework is used to test the Zendesk RestFul API integration with their support ticket system. It uses Apache HTTP client to build a custome generic restful client with api token authentication.  The custom rest client is In the main directory. This client contains methods to do post, get, delete requests. The http response json content is mapped to Java POJO class with Jackson Object Mapper. Those POJO classes will be utilitized in the tests.
 
-Classes and description:
+1. Classes and description:
 
 class(package)
 
@@ -53,7 +53,7 @@ TicketTest(test)
 
 This class contains all the junit tests.
 
-Requirement to build and run the tests:
+2. Requirement to build and run the tests:
 
 Install maven 3.5.4
 Install Java 1.8
@@ -62,7 +62,7 @@ Clone and Download the repository.
 Do a maven clean install
 On your Java IDE, in the test package run the tests in TicketTest.java as Junit tests. 
 
-Test cases documentation: All tests are in the TicketTest.java class in test package.
+3. Test cases documentation: All tests are in the TicketTest.java class in test package.
 tests and description
 testCreateATicket()	
 1. Verify the http response code equals to 201	
