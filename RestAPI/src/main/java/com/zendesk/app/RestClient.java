@@ -49,6 +49,7 @@ public class RestClient  {
         
         // set up the basic authentication header
         String encodedtoken = Base64.getEncoder().encodeToString(this.token.getBytes());
+        logger.info ("The encoded token is " +encodedtoken);
         Header authorizationHeader = new BasicHeader("Authorization", "Basic " + encodedtoken);
   
         Header contentTypeHeader = new BasicHeader(HttpHeaders.CONTENT_TYPE, "application/json");

@@ -56,6 +56,54 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 *
 * @author vyuen
 */
+
+/* A sample ticket object is shown below:
+ *  {
+	      "url": "https://yyvincent.zendesk.com/api/v2/tickets/22.json",
+	      "id": 22,
+	      "external_id": null,
+	      "via": {
+	        "channel": "api",
+	        "source": {
+	          "from": {},
+	          "to": {},
+	          "rel": null
+	        }
+	      },
+	      "created_at": "2019-01-21T08:38:27Z",
+	      "updated_at": "2019-01-21T08:38:27Z",
+	      "type": null,
+	      "subject": "My ABc test",
+	      "raw_subject": "My ABc test",
+	      "description": "Test for the first ticket",
+	      "priority": null,
+	      "status": "open",
+	      "recipient": null,
+	      "requester_id": 375862625851,
+	      "submitter_id": 375829672631,
+	      "assignee_id": 375829672631,
+	      "organization_id": null,
+	      "group_id": 360003654471,
+	      "collaborator_ids": [],
+	      "follower_ids": [],
+	      "email_cc_ids": [],
+	      "forum_topic_id": null,
+	      "problem_id": null,
+	      "has_incidents": false,
+	      "is_public": true,
+	      "due_at": null,
+	      "tags": [],
+	      "custom_fields": [],
+	      "satisfaction_rating": null,
+	      "sharing_agreement_ids": [],
+	      "fields": [],
+	      "followup_ids": [],
+	      "brand_id": 360002107791,
+	      "allow_channelback": false,
+	      "allow_attachments": true
+	    } 
+ */
+
 public class Ticket {
 
 	@JsonProperty("url")

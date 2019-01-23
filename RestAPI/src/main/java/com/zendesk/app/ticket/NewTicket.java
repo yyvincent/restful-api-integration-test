@@ -16,10 +16,28 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 })
 
 /**
-* This is a pojo class for the API create request. The response of the create request is stored in this class
+* This is a pojo class for the API create request response content. The response of the create request is stored in this class
 *
 * @author vyuen
 */
+
+/*
+* A sample of the http create request is shown below:
+{"request": {"requester": {"name": "Vincent Yuen"},"subject":
+"Delete test","comment": {"body": "Test for creating a  ticket" }}}
+*/
+
+/*
+* A sample of http response is shown below:
+{"request":{"url":"https://yyvincent.zendesk.com/api/v2/requests/49.json","id":49,"status":"open",
+	"priority":null,"type":null,"subject":"Delete test","description":"Test for creating a  ticket",
+	"organization_id":null,"via":{"channel":"api","source":{"from":{},"to":{},"rel":null}},
+	"custom_fields":[],"requester_id":375942234252,"collaborator_ids":[],"email_cc_ids":[],
+	"is_public":true,"due_at":null,"can_be_solved_by_me":false,"created_at":"2019-01-23T21:16:09Z",
+	"updated_at":"2019-01-23T21:16:09Z","recipient":null,"followup_source_id":null,
+	"assignee_id":375829672631,"fields":[]}}
+*/
+
 public class NewTicket {
 
 	@JsonProperty("request")

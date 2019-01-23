@@ -26,6 +26,153 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 * It stores all the ticket information in a list.
 * @author vyuen
 */
+
+/*A sample of the list request response looks like the following:
+{
+	  "tickets": [
+	    {
+	      "url": "https://yyvincent.zendesk.com/api/v2/tickets/1.json",
+	      "id": 1,
+	      "external_id": null,
+	      "via": {
+	        "channel": "sample_ticket",
+	        "source": {
+	          "from": {},
+	          "to": {},
+	          "rel": null
+	        }
+	      },
+	      "created_at": "2019-01-20T23:37:51Z",
+	      "updated_at": "2019-01-20T23:37:51Z",
+	      "type": "incident",
+	      "subject": "Sample ticket: Meet the ticket",
+	      "raw_subject": "Sample ticket: Meet the ticket",
+	      "description": "Hi Vincent,\n\nEmails, chats, voicemails, and tweets are captured in Zendesk Support as tickets. Start typing above to respond and click Submit to send. To test how an email becomes a ticket, send a message to support@yyvincent.zendesk.com.\n\nCurious about what your customers will see when you reply? Check out this video:\nhttps://demos.zendesk.com/hc/en-us/articles/202341799\n",
+	      "priority": "normal",
+	      "status": "open",
+	      "recipient": null,
+	      "requester_id": 375784786052,
+	      "submitter_id": 375829672631,
+	      "assignee_id": 375829672631,
+	      "organization_id": null,
+	      "group_id": 360003654471,
+	      "collaborator_ids": [],
+	      "follower_ids": [],
+	      "email_cc_ids": [],
+	      "forum_topic_id": null,
+	      "problem_id": null,
+	      "has_incidents": false,
+	      "is_public": true,
+	      "due_at": null,
+	      "tags": [
+	        "sample",
+	        "support",
+	        "zendesk"
+	      ],
+	      "custom_fields": [],
+	      "satisfaction_rating": null,
+	      "sharing_agreement_ids": [],
+	      "fields": [],
+	      "followup_ids": [],
+	      "brand_id": 360002107791,
+	      "allow_channelback": false,
+	      "allow_attachments": true
+	    },
+	    {
+	      "url": "https://yyvincent.zendesk.com/api/v2/tickets/22.json",
+	      "id": 22,
+	      "external_id": null,
+	      "via": {
+	        "channel": "api",
+	        "source": {
+	          "from": {},
+	          "to": {},
+	          "rel": null
+	        }
+	      },
+	      "created_at": "2019-01-21T08:38:27Z",
+	      "updated_at": "2019-01-21T08:38:27Z",
+	      "type": null,
+	      "subject": "My ABc test",
+	      "raw_subject": "My ABc test",
+	      "description": "Test for the first ticket",
+	      "priority": null,
+	      "status": "open",
+	      "recipient": null,
+	      "requester_id": 375862625851,
+	      "submitter_id": 375829672631,
+	      "assignee_id": 375829672631,
+	      "organization_id": null,
+	      "group_id": 360003654471,
+	      "collaborator_ids": [],
+	      "follower_ids": [],
+	      "email_cc_ids": [],
+	      "forum_topic_id": null,
+	      "problem_id": null,
+	      "has_incidents": false,
+	      "is_public": true,
+	      "due_at": null,
+	      "tags": [],
+	      "custom_fields": [],
+	      "satisfaction_rating": null,
+	      "sharing_agreement_ids": [],
+	      "fields": [],
+	      "followup_ids": [],
+	      "brand_id": 360002107791,
+	      "allow_channelback": false,
+	      "allow_attachments": true
+	    },
+	    {
+	      "url": "https://yyvincent.zendesk.com/api/v2/tickets/23.json",
+	      "id": 23,
+	      "external_id": null,
+	      "via": {
+	        "channel": "api",
+	        "source": {
+	          "from": {},
+	          "to": {},
+	          "rel": null
+	        }
+	      },
+	      "created_at": "2019-01-21T08:53:16Z",
+	      "updated_at": "2019-01-21T08:53:16Z",
+	      "type": null,
+	      "subject": "Delete test",
+	      "raw_subject": "Delete test",
+	      "description": "Test for the first ticket",
+	      "priority": null,
+	      "status": "open",
+	      "recipient": null,
+	      "requester_id": 375803701072,
+	      "submitter_id": 375829672631,
+	      "assignee_id": 375829672631,
+	      "organization_id": null,
+	      "group_id": 360003654471,
+	      "collaborator_ids": [],
+	      "follower_ids": [],
+	      "email_cc_ids": [],
+	      "forum_topic_id": null,
+	      "problem_id": null,
+	      "has_incidents": false,
+	      "is_public": true,
+	      "due_at": null,
+	      "tags": [],
+	      "custom_fields": [],
+	      "satisfaction_rating": null,
+	      "sharing_agreement_ids": [],
+	      "fields": [],
+	      "followup_ids": [],
+	      "brand_id": 360002107791,
+	      "allow_channelback": false,
+	      "allow_attachments": true
+	    }
+	  ],
+	  "next_page": null,
+	  "previous_page": null,
+	  "count": 21
+	}
+*/
+
 public class AllTickets {
 
 	@JsonProperty("tickets")

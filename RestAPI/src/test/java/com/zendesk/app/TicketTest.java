@@ -51,7 +51,9 @@ public class TicketTest {
 	@Test 
 	public void testCreateATicket() throws Exception {
 		String createRequest =  "{\"request\": {\"requester\": {\"name\": \"Vincent Yuen\"},\"subject\": \"Delete test\",\"comment\": {\"body\": \"Test for creating a  ticket\" }}}";
+		logger.info(createRequest);
 		HttpResponse createResponse = testClient.getHttpPostResponseWithToken(createEndPoint,createRequest);
+		logger.info(createResponse.toString());
 		// Verify the response code = 201
 		assertTrue(createResponse.getStatusLine().getStatusCode() == 201);	
 
@@ -71,7 +73,6 @@ public class TicketTest {
 		String comment = newTicket.getRequest().getDescription();
 		assertEquals("Test for creating a  ticket",comment);
 	}
-
 
 	/**
 	 * Test the list api
@@ -95,12 +96,13 @@ public class TicketTest {
 	public void testDeleteATicket() throws Exception {
 		// The random ticket id to delete
 		BigInteger ticketID = getARandomTicketID();
-		
-	    // The delete api end point
+
+		// The delete api end point
 		String DeleteRequest =  "https://yyvincent.zendesk.com//api/v2/tickets/" + ticketID + ".json";
-		
+
 		// Send the delete request
 		HttpResponse deleteResponse = testClient.getHttpDeleteResponse(DeleteRequest);
+		logger.info(deleteResponse.toString());
 
 		// Verify the response code = 201
 		assertTrue(deleteResponse.getStatusLine().getStatusCode() == 204);	
