@@ -35,10 +35,10 @@ On your Java IDE, in the test package run the tests in TicketTest.java as Junit 
 
 Test cases documentation: All tests are in the TicketTest.java class in test package.
 
-tests			description
+tests			descriptions
 
 
-testCreateATicket()     
+testCreateATicket():    
 Verify the http response code equals to 201
 
 Verify I can create a ticket
@@ -47,13 +47,13 @@ Verify I can add a comment to the ticket, and the comment is matched between the
                         
 Verify the system has the new ticket ID
 
-testListAllTickets()	
+testListAllTickets():	
 
 Verify the http response code equals to 200
                         
 Verify the system has 0 (at the beginning) or more tickets
 
-testDeleteATicket()	
+testDeleteATicket():
 
 Verify the http response code equals to 201
                       
