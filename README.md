@@ -38,14 +38,23 @@ Test cases documentation: All tests are in the TicketTest.java class in test pac
 tests			description
 
 
-testCreateATicket()     Verify the http response code equals to 201	
-			Verify I can create a ticket
-			Verify I can add a comment to the ticket, and the comment is matched 
-                        between the input and what is stored in the system
-                        Verify the system has the new ticket ID
+testCreateATicket()     
+Verify the http response code equals to 201
 
-testListAllTickets()	Verify the http response code equals to 200
-                        Verify the system has 0 (at the beginning) or more tickets
+Verify I can create a ticket
 
-testDeleteATicket()	Verify the http response code equals to 201
-                        Verify after the delete request based on ticket ID, the system doesn't have the deleted	ID.
+Verify I can add a comment to the ticket, and the comment is matched between the input and what is stored in the system
+                        
+Verify the system has the new ticket ID
+
+testListAllTickets()	
+
+Verify the http response code equals to 200
+                        
+Verify the system has 0 (at the beginning) or more tickets
+
+testDeleteATicket()	
+
+Verify the http response code equals to 201
+                      
+Verify after the delete request based on ticket ID, the system doesn't have the deleted	ID.
