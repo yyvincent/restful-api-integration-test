@@ -104,7 +104,7 @@ public class TicketTest {
 		HttpResponse deleteResponse = testClient.getHttpDeleteResponse(DeleteRequest);
 		logger.info(deleteResponse.toString());
 
-		// Verify the response code = 201
+		// Verify the response code = 204
 		assertTrue(deleteResponse.getStatusLine().getStatusCode() == 204);	
 
 		// Verify the specific ticket is no longer in the system.
